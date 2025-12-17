@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년도 APM 다이어트댄스 송년의 밤 초대장</title>
+    
+    <!-- Open Graph Tags for KakaoTalk/Social Sharing (카카오톡 미리보기 설정) -->
+    <meta property="og:title" content="🎆 APM 다이어트댄스 송년의 밤 (2025.12.18)">
+    <meta property="og:description" content="한 해의 노력과 땀을 축하하는 특별한 밤에 여러분을 초대합니다! (뷔페, 장기자랑, 상품 추첨)">
+    <!-- 안정적인 크리스마스 테마의 대체 이미지 URL로 수정 (Netlify 오류 방지) -->
+    <meta property="og:image" content="https://placehold.co/800x400/146B3A/F8B229?text=APM+다이어트댄스+송년의+밤">
+    <meta property="og:url" content="[여기에 실제 웹 주소를 넣어주세요]"> 
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@300;400;700;900&family=Sunflower:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        fun: ['Gaegu', 'cursive'],
+                        title: ['Sunflower', 'sans-serif'],
+                    },
+                    colors: {
+                        christmas: {
+                            red: '#D42426',
+                            green: '#146B3A',
+                            gold: '#F8B229',
+                            dark: '#1a1a1a'
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-gold': 'pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'snow': 'snow 10s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite', // 추가된 애니메이션
+                    },
+                    keyframes: {
+                        'pulse-gold': {
+                            '0%, 100%': { opacity: 1, color: '#F8B229' },
+                            '50%': { opacity: .5, color: '#FFF' },
+                        },
+                        'snow': {
+                            '0%': { transform: 'translateY(-10px)' },
+                            '100%': { transform: 'translateY(100vh)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            opacity: 0.8;
+            animation: snow 10s linear infinite;
+        }
+        .bg-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.1;
+        }
+        /* 이전 반짝이는 효과 CSS 제거됨 */
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen overflow-x-hidden font-sans">
+
+    <!-- 눈 내리는 효과 -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <!-- 배경 패턴 -->
+    <div class="fixed inset-0 bg-pattern z-0"></div>
+
+    <div class="relative z-10 max-w-md mx-auto bg-slate-800 min-h-screen shadow-2xl border-x-4 border-christmas-gold/30">
+        
+        <!-- 네비게이션 탭 -->
+        <div class="sticky top-0 z-50 flex bg-slate-900/90 backdrop-blur border-b border-white/10">
+            <button onclick="switchTab('invite')" id="btn-invite" class="flex-1 py-4 text-center font-bold text-christmas-gold border-b-2 border-christmas-gold transition-all">
+                <span class="text-xl">💌 초대장</span>
+            </button>
+            <button onclick="switchTab('schedule')" id="btn-schedule" class="flex-1 py-4 text-center font-bold text-gray-400 border-b-2 border-transparent hover:text-white transition-all">
+                <span class="text-xl">📅 식순안내</span>
+            </button>
+        </div>
+
+        <!-- 1페이지: 초대장 (메인) -->
+        <div id="page-invite" class="animate-fade-in pb-20">
+            <!-- 새로운 타이틀 영역 (영웅 섹션 삭제 후 상단에 배치) -->
+            <div class="pt-6 pb-4 text-center bg-slate-800/80">
+                <!-- 웃긴 드레스 주인공 상징 추가 -->
+                <div class="text-5xl mb-2 flex justify-center space-x-4">
+                    <span class="animate-bounce-slow" style="animation-delay: 0.2s;">🕺</span>
+                    <span class="text-christmas-gold animate-bounce-slow">👑</span>
+                    <span class="animate-bounce-slow" style="animation-delay: 0.4s;">💃</span>
+                </div>
+                <!-- /웃긴 드레스 주인공 상징 추가 -->
+                <p class="text-christmas-gold font-fun text-xl mb-1">Happy New Year!</p>
+                <h1 class="text-3xl sm:text-4xl font-black font-title text-white drop-shadow-lg leading-tight">
+                    <span class="text-christmas-gold text-2xl sm:text-3xl block mb-1">APM 다이어트댄스</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-white to-green-500 block">2025 송년의 밤</span>
+                </h1>
+            </div>
+            <!-- /새로운 타이틀 영역 -->
+
+            <!-- 초대 문구 -->
+            <div class="px-6 py-8 text-center space-y-6">
+                <!-- Invitation Text Box & TTS Feature -->
+                <div id="invitationTextBlock" class="bg-slate-700/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <p id="invitationText" class="text-lg leading-relaxed text-gray-200">
+                        한 해 동안 땀 흘리며 함께해 주신<br>
+                        회원님들을 위한 특별한 밤!<br><br>
+                        <span class="font-bold text-christmas-gold text-xl">"APM 다이어트댄스 송년의 밤"</span>에<br>
+                        여러분을 정중히 초대합니다.
+                    </p>
+                    
+                    <!-- TTS Button -->
+                    <button id="ttsButton" onclick="readInvitation()" class="mt-4 w-full px-4 py-2 bg-christmas-red hover:bg-red-700 text-white font-bold rounded-full shadow-lg transition duration-200 flex items-center justify-center">
+                        <span class="text-xl mr-2">🔊</span> 초대장 읽어주기 (TTS)
+                    </button>
+                    <audio id="ttsAudio" class="hidden w-full mt-4" controls></audio>
+                </div>
+                
+                <!-- RSVP Suggestion Feature (LLM) -->
+                <div class="bg-slate-700/50 p-6 rounded-2xl border border-christmas-gold/50 backdrop-blur-sm">
+                    <h3 class="text-xl font-bold text-christmas-gold mb-3">✨ 댓글/응답 추천 (Gemini AI)</h3>
+                    <p class="text-sm text-gray-300 mb-3">어떤 재미있는 댓글을 남길지 고민되세요? 버튼을 눌러보세요!</p>
+                    <div id="rsvpSuggestionOutput" class="min-h-[50px] bg-slate-900 p-3 rounded-lg text-sm text-yellow-300 italic mb-3 flex items-center justify-center text-center">
+                        추천 댓글이 여기에 나타납니다.
+                    </div>
+                    <button id="rsvpButton" onclick="generateRsvpSuggestion()" class="w-full px-4 py-2 bg-christmas-gold hover:bg-yellow-400 text-christmas-dark font-bold rounded-full shadow-lg transition duration-200 flex items-center justify-center">
+                        <span class="text-xl mr-2">✍️✨</span> 재미있는 댓글 추천받기
+                    </button>
+                </div>
+
+                <!-- 일시 및 장소 -->
+                <div class="space-y-4 mt-8">
+                    <div class="flex items-center justify-center space-x-3 bg-slate-900 p-4 rounded-xl border border-christmas-red/50">
+                        <div class="text-3xl">📅</div>
+                        <div class="text-left">
+                            <p class="text-sm text-gray-400">Date</p>
+                            <p class="text-xl font-bold text-white">2025.12.18 (목)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3 bg-slate-900 p-4 rounded-xl border border-christmas-green/50">
+                        <div class="text-3xl">⏰</div>
+                        <div class="text-left">
+                            <p class="text-sm text-gray-400">Time</p>
+                            <p class="text-xl font-bold text-white">저녁 7시부터 ~ 자정</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 드레스 코드 -->
+                <div class="mt-10">
+                    <h3 class="text-2xl font-fun font-bold text-christmas-gold mb-6 decoration-wavy underline decoration-christmas-red">🥻 Dress Code</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/10 p-4 rounded-xl">
+                            <div class="flex justify-center space-x-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-red-600 shadow-lg border-2 border-white"></div>
+                                <div class="w-8 h-8 rounded-full bg-green-600 shadow-lg border-2 border-white"></div>
+                            </div>
+                            <p class="font-bold">크리스마스 컬러</p>
+                            <p class="text-xs text-gray-400">빨강 & 초록 포인트!</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl">
+                            <div class="flex justify-center space-x-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-black shadow-lg border-2 border-white"></div>
+                                <div class="w-8 h-8 rounded-full bg-white shadow-lg border-2 border-gray-300"></div>
+                            </div>
+                            <p class="font-bold">시크한 기본</p>
+                            <p class="text-xs text-gray-400">블랙 & 화이트</p>
+                        </div>
+                    </div>
+                    <!-- '웃기는 드레스 주인공' 및 AI 활용 안내 섹션이 제거됨 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 2페이지: 식순 안내 (스케줄) -->
+        <div id="page-schedule" class="hidden animate-fade-in pb-20">
+            <div class="bg-christmas-red p-6 text-center rounded-b-3xl shadow-lg mb-8">
+                <h2 class="text-3xl font-title font-bold text-white">Time Table</h2>
+                <p class="text-white/80 font-fun mt-2">오늘 밤, 주인공은 여러분입니다!</p>
+            </div>
+
+            <div class="px-6 relative">
+                <!-- 타임라인 라인 -->
+                <div class="absolute left-10 top-0 bottom-0 w-1 bg-white/20"></div>
+
+                <!-- 19:00 입장 -->
+                <div class="flex mb-8 relative">
+                    <div class="w-16 flex-shrink-0 flex flex-col items-center z-10">
+                        <div class="w-8 h-8 bg-christmas-green rounded-full flex items-center justify-center border-4 border-slate-800 font-bold text-xs">Start</div>
+                    </div>
+                    <div class="bg-slate-700/50 p-5 rounded-r-2xl rounded-bl-2xl flex-1 border-l-4 border-christmas-green ml-4">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <span class="font-bold text-xl text-christmas-green">19:00</span>
+                            <span class="text-sm bg-christmas-green/20 px-2 py-1 rounded text-green-300">입장</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">포토타임 & 뷔페 🍱</h3>
+                        <p class="text-gray-300 text-sm">포토존에서 인생샷 찰칵! 📸<br>준비된 맛있는 음식과 와인을 즐겨주세요.</p>
+                    </div>
+                </div>
+
+                <!-- 19:30 1부 -->
+                <div class="flex mb-8 relative">
+                    <div class="w-16 flex-shrink-0 flex flex-col items-center z-10">
+                        <div class="w-4 h-4 bg-christmas-red rounded-full border-2 border-slate-800"></div>
+                    </div>
+                    <div class="bg-slate-700/50 p-5 rounded-r-2xl rounded-bl-2xl flex-1 border-l-4 border-christmas-red ml-4">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <span class="font-bold text-xl text-christmas-red">19:30</span>
+                            <span class="text-sm bg-christmas-red/20 px-2 py-1 rounded text-red-300">1부 시작</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">🧨 장기자랑 Part.1</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="bg-slate-800 p-3 rounded-lg flex items-center gap-2">
+                                <span class="text-xl">🎀</span>
+                                <div>
+                                    <span class="font-bold text-pink-400">여걸식스</span>
+                                    <p class="text-xs text-gray-400">텔미텔미 / 롤리폴리 / 런투유</p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-800 p-3 rounded-lg flex items-center gap-2">
+                                <span class="text-xl">🎀</span>
+                                <div>
+                                    <span class="font-bold text-blue-400">아.우.디</span>
+                                    <p class="text-xs text-gray-400">까탈레나 / 소방차</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-white/10 text-sm text-yellow-300 font-bold">
+                            ✨ 상품 추첨 및 각종 게임 진행
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 브레이크 타임 -->
+                <div class="flex mb-8 relative">
+                    <div class="w-16 flex-shrink-0 flex flex-col items-center z-10">
+                        <div class="w-4 h-4 bg-gray-400 rounded-full border-2 border-slate-800"></div>
+                    </div>
+                    <div class="bg-slate-700/30 p-4 rounded-r-2xl rounded-bl-2xl flex-1 ml-4 text-center">
+                        <span class="font-bold text-gray-400">☕ Break Time (10분)</span>
+                        <p class="text-xs text-gray-500 mt-1">간식과 후식으로 당 충전!</p>
+                    </div>
+                </div>
+
+                <!-- 2부 -->
+                <div class="flex mb-8 relative">
+                    <div class="w-16 flex-shrink-0 flex flex-col items-center z-10">
+                        <div class="w-4 h-4 bg-christmas-gold rounded-full border-2 border-slate-800 animate-pulse"></div>
+                    </div>
+                    <div class="bg-slate-700/50 p-5 rounded-r-2xl rounded-bl-2xl flex-1 border-l-4 border-christmas-gold ml-4">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <span class="font-bold text-xl text-christmas-gold">Part 2</span>
+                            <span class="text-sm bg-yellow-500/20 px-2 py-1 rounded text-yellow-300">하이라이트</span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="font-bold mb-1">💃 단체 댄스 (캐롤)</h3>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-yellow-900/50 to-slate-800 p-4 rounded-xl border border-yellow-600/30 mb-4">
+                            <h3 class="font-bold text-yellow-400 text-center mb-3">🏆 APM 어워즈 시상식</h3>
+                            <ul class="text-sm space-y-1 text-gray-300 text-center font-fun">
+                                <li>땡큐베리감상 🍓</li>
+                                <li>비가오나눈이오나상 ☔</li>
+                                <li>흔들어재끼상 🕺</li>
+                                <li>위고비그이상상 💊</li>
+                                <li>으리으리의리상 👊</li>
+                                <li>떡상 📈</li>
+                            </ul>
+                            <div class="mt-3 bg-yellow-600 text-black text-center font-bold text-xs py-1 rounded shadow-lg animate-pulse">
+                                🎁 한달 무료 수강권 추첨!
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">🧨 장기자랑 Part.2</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between items-center bg-slate-800 p-2 rounded">
+                                <span>🎀 오전부 <span class="text-gray-400 text-xs">- 주시고</span></span>
+                            </div>
+                            <div class="text-center text-xs text-yellow-200 py-1">--- 상품 추첨 ---</div>
+                            <div class="flex justify-between items-center bg-slate-800 p-2 rounded">
+                                <span>🎀 저녁부 <span class="text-gray-400 text-xs">- 아나까나</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 피날레 -->
+                <div class="flex mb-8 relative">
+                    <div class="w-16 flex-shrink-0 flex flex-col items-center z-10">
+                        <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center border-4 border-slate-800 font-bold text-xs">End</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-900/60 to-slate-700/50 p-5 rounded-r-2xl rounded-bl-2xl flex-1 border-l-4 border-purple-500 ml-4">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <span class="font-bold text-xl text-purple-400">22:00 ~</span>
+                            <span class="text-sm bg-purple-500/20 px-2 py-1 rounded text-purple-300">광란의 밤</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">🔥 댄스배틀 & 시상</h3>
+                        <p class="text-gray-300 text-sm">각종 게임 & 파티 마무리</p>
+                        <p class="text-xs text-gray-400 mt-2">*공식 종료는 10시지만, 자정까지 달릴 수 있습니다! 😁</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center p-8 text-gray-500 text-xs">
+                &copy; 2025 APM 다이어트댄스<br>
+                All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Gemini API Configuration and Helpers ---
+        const apiKey = "";
+        
+        // Helper to convert base64 to ArrayBuffer
+        function base64ToArrayBuffer(base64) {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        // Helper to convert signed 16-bit PCM to WAV format
+        function pcmToWav(pcm16, sampleRate = 24000) {
+            const numChannels = 1;
+            const bytesPerSample = 2; // 16-bit PCM
+            const byteRate = sampleRate * numChannels * bytesPerSample;
+            const blockAlign = numChannels * bytesPerSample;
+            const dataSize = pcm16.length * bytesPerSample;
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+            let offset = 0;
+
+            // RIFF chunk
+            view.setUint32(offset, 0x52494646, false); offset += 4; // "RIFF"
+            view.setUint32(offset, 36 + dataSize, true); offset += 4; // File size - 8
+            view.setUint32(offset, 0x57415645, false); offset += 4; // "WAVE"
+
+            // fmt chunk
+            view.setUint32(offset, 0x666d7420, false); offset += 4; // "fmt "
+            view.setUint32(offset, 16, true); offset += 4; // Sub-chunk size (16 for PCM)
+            view.setUint16(offset, 1, true); offset += 2; // Audio format (1 for PCM)
+            view.setUint16(offset, numChannels, true); offset += 2; // Number of channels
+            view.setUint32(offset, sampleRate, true); offset += 4; // Sample rate
+            view.setUint32(offset, byteRate, true); offset += 4; // Byte rate
+            view.setUint16(offset, blockAlign, true); offset += 2; // Block align
+            view.setUint16(offset, bytesPerSample * 8, true); offset += 2; // Bits per sample (16)
+
+            // data chunk
+            view.setUint32(offset, 0x64617461, false); offset += 4; // "data"
+            view.setUint32(offset, dataSize, true); offset += 4; // Data size
+
+            // Write PCM data (16-bit signed)
+            for (let i = 0; i < pcm16.length; i++) {
+                view.setInt16(offset, pcm16[i], true);
+                offset += 2;
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        }
+        
+        // --- Main LLM Functions ---
+        const apiUrlLLM = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        const apiUrlTts = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+        async function fetchWithBackoff(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        throw new Error(`API error: ${response.status} ${response.statusText}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i < maxRetries - 1) {
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        console.warn(`Retry attempt ${i + 1} failed. Retrying in ${delay}ms.`, error.message);
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                    } else {
+                        throw error;
+                    }
+                }
+            }
+        }
+
+
+        async function readInvitation() {
+            const ttsButton = document.getElementById('ttsButton');
+            const ttsAudio = document.getElementById('ttsAudio');
+            const invitationTextElement = document.getElementById('invitationText');
+            
+            // Extract and clean the text content
+            const rawText = invitationTextElement.innerText || invitationTextElement.textContent;
+            const textToSpeak = rawText.replace(/\s+/g, ' ').trim(); 
+            
+            if (!textToSpeak) {
+                alertBox('음성으로 변환할 내용이 없습니다.', 'error');
+                return;
+            }
+
+            ttsButton.disabled = true;
+            ttsButton.innerHTML = '<span class="text-xl mr-2">🎧</span> 음성 생성 중...';
+            ttsAudio.classList.add('hidden');
+            ttsAudio.pause();
+            ttsAudio.removeAttribute('src');
+
+            try {
+                const payload = {
+                    contents: [{
+                        parts: [{ text: `활기차고 즐거운 분위기로 한국어로 말해주세요: ${textToSpeak}` }]
+                    }],
+                    generationConfig: {
+                        responseModalities: ["AUDIO"],
+                        speechConfig: {
+                            voiceConfig: {
+                                // Kore: Firm, suitable for a formal-but-fun invitation
+                                prebuiltVoiceConfig: { voiceName: "Kore" }
+                            }
+                        }
+                    }
+                };
+                
+                const response = await fetchWithBackoff(apiUrlTts, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const part = result?.candidates?.[0]?.content?.parts?.[0];
+                const audioData = part?.inlineData?.data;
+                const mimeType = part?.inlineData?.mimeType;
+
+                if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
+                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                    const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+                    
+                    const pcmData = base64ToArrayBuffer(audioData);
+                    const pcm16 = new Int16Array(pcmData);
+                    const wavBlob = pcmToWav(pcm16, sampleRate);
+                    const audioUrl = URL.createObjectURL(wavBlob);
+                    
+                    ttsAudio.src = audioUrl;
+                    ttsAudio.classList.remove('hidden');
+                    ttsAudio.play();
+                    
+                } else {
+                    throw new Error('TTS API에서 유효한 오디오 데이터를 받지 못했습니다.');
+                }
+            } catch (error) {
+                console.error('TTS 에러:', error);
+                alertBox('음성 생성에 실패했습니다. 잠시 후 다시 시도해 주세요.', 'error');
+            } finally {
+                ttsButton.disabled = false;
+                ttsButton.innerHTML = '<span class="text-xl mr-2">🔊</span> 초대장 읽어주기 (TTS)';
+            }
+        }
+        
+        async function generateRsvpSuggestion() {
+            const rsvpButton = document.getElementById('rsvpButton');
+            const rsvpOutput = document.getElementById('rsvpSuggestionOutput');
+            
+            rsvpButton.disabled = true;
+            rsvpButton.innerHTML = '<span class="text-xl mr-2">⏳</span> 아이디어 생각 중...';
+            rsvpOutput.classList.remove('text-yellow-300', 'italic');
+            rsvpOutput.classList.add('text-gray-400');
+            rsvpOutput.innerText = 'AI가 응답을 생성하고 있습니다. 잠시만 기다려 주세요...';
+
+            const userQuery = "APM 다이어트 댄스 송년의 밤 초대장입니다. 이 모임의 분위기(춤, 운동, 파티)에 맞게, 재미있고 유머러스하며 참석에 대한 열정을 보여주는 한국어 댓글을 하나만 생성해 주세요. (1문장으로 짧게)";
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: "당신은 APM 다이어트댄스 동호회 송년회에 참석하는 활기차고 재미있는 회원입니다. 응답은 유머러스하고 긍정적이어야 하며, 댄스 관련 용어 또는 유머를 포함할 수 있습니다. 결과만 한국어로 출력하세요." }]
+                }
+            };
+
+            try {
+                const response = await fetchWithBackoff(apiUrlLLM, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text || "댓글 생성에 실패했습니다.";
+                
+                rsvpOutput.innerText = generatedText.trim().replace(/^['"]|['"]$/g, ''); // Remove quotes if LLM added them
+                rsvpOutput.classList.add('text-yellow-300', 'italic');
+                rsvpOutput.classList.remove('text-gray-400');
+                
+            } catch (error) {
+                console.error('LLM 에러:', error);
+                rsvpOutput.innerText = '댓글 추천에 실패했습니다. (API 오류)';
+                rsvpOutput.classList.add('text-red-400');
+                rsvpOutput.classList.remove('text-yellow-300', 'italic');
+            } finally {
+                rsvpButton.disabled = false;
+                rsvpButton.innerHTML = '<span class="text-xl mr-2">✍️✨</span> 재미있는 댓글 추천받기';
+            }
+        }
+        
+        // Custom Alert Box (replacing alert())
+        function alertBox(message, type = 'info') {
+            const container = document.createElement('div');
+            container.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 p-4 rounded-lg shadow-xl z-[9999] transition-opacity duration-300';
+            
+            if (type === 'error') {
+                container.classList.add('bg-red-600', 'text-white');
+            } else {
+                container.classList.add('bg-blue-600', 'text-white');
+            }
+            
+            container.textContent = message;
+            document.body.appendChild(container);
+
+            setTimeout(() => {
+                container.style.opacity = '0';
+                setTimeout(() => container.remove(), 300);
+            }, 3000);
+        }
+
+        // 탭 전환 함수 (기존 함수)
+        function switchTab(tabName) {
+            const pageInvite = document.getElementById('page-invite');
+            const pageSchedule = document.getElementById('page-schedule');
+            const btnInvite = document.getElementById('btn-invite');
+            const btnSchedule = document.getElementById('btn-schedule');
+
+            if (tabName === 'invite') {
+                pageInvite.classList.remove('hidden');
+                pageSchedule.classList.add('hidden');
+                
+                btnInvite.classList.add('text-christmas-gold', 'border-christmas-gold');
+                btnInvite.classList.remove('text-gray-400', 'border-transparent');
+                
+                btnSchedule.classList.add('text-gray-400', 'border-transparent');
+                btnSchedule.classList.remove('text-christmas-gold', 'border-christmas-gold');
+            } else {
+                pageInvite.classList.add('hidden');
+                pageSchedule.classList.remove('hidden');
+                
+                btnSchedule.classList.add('text-christmas-gold', 'border-christmas-gold');
+                btnSchedule.classList.remove('text-gray-400', 'border-christmas-gold');
+                
+                btnInvite.classList.add('text-gray-400', 'border-transparent');
+                btnInvite.classList.remove('text-christmas-gold', 'border-christmas-gold');
+            }
+        }
+        
+        // 눈 내리는 효과 생성 (기존 함수)
+        function createSnowflakes() {
+            const container = document.getElementById('snowContainer');
+            const snowflakeCount = 30;
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.innerHTML = '❄';
+                snowflake.className = 'snowflake';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+                snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+                snowflake.style.opacity = Math.random();
+                container.appendChild(snowflake);
+            }
+        }
+
+        window.onload = createSnowflakes;
+    </script>
+</body>
+</html>
